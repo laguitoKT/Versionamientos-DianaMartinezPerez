@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -69,8 +70,8 @@ button {
 }
 
 button:hover {
-    background-color: #D2D0A0;
-    color: #537D5D;
+    background-color: #FCB7C7;
+    color: #1F4529;
 }
 
 table {
@@ -118,4 +119,24 @@ td {
     background-color: #FFFDF6;
     color: #000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leaf {
+    position: fixed;
+    top: -50px;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: -1;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% { 
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(110vh) translateX(50px) rotate(360deg); 
+        opacity: 0; 
+    }
 }

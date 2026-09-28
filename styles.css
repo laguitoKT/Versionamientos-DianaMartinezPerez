@@ -15,10 +15,24 @@ h1 {
     color: #1F4529;
     font-family: "Georgia", serif;
     text-align: center;
-    margin-top: 40px;
     font-size: 3em;
     display: inline;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+h2 {
+    color: #1F4529;
+    font-family: "Georgia", serif;
+    text-align: center;
+    font-size: 2em;
+    display: inline;
+    margin-top: -20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-decoration: underline;
+    text-decoration-color: #FCB7C7;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+    text-decoration-style: wavy;
+    text-decoration-skip-ink: none;
 }
 
 .container {
@@ -76,8 +90,12 @@ button:hover {
 
 table {
     width: 60%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
     margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 th, td {
@@ -89,7 +107,10 @@ th {
     background-color: #73946B;
     color: white;
     text-align: center;
-    
+    border-bottom: 1px solid #D2D0A0;
+}
+tr:last-child td {
+  border-bottom: none; 
 }
 
 td {
@@ -97,7 +118,6 @@ td {
     color: #537D5D;
     text-align: center;
     border-bottom: 1px solid #D2D0A0;
-
 }
 
 .delete-btn {
@@ -118,7 +138,7 @@ td {
 #productsTable tbody tr {
     background-color: #FFFDF6;
     color: #000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #D2D0A0;
 }
 
 .leaf {

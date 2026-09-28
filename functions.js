@@ -77,3 +77,28 @@ document.getElementById('addProduct').addEventListener('click', addProduct);
 
 //Load products when the page loads
 loadProductTable();
+
+// Animación de hojitas cayendo 
+function createLeaf() {
+    const leaf = document.createElement('div');
+    leaf.classList.add('leaf');
+    
+
+    const leaves = ['💮', '🌸', '🍀'];
+    leaf.innerText = leaves[Math.floor(Math.random() * leaves.length)];
+    
+
+    leaf.style.left = Math.random() * 100 + 'vw';
+    
+
+    const fallDuration = Math.random() * 4 + 4;
+    leaf.style.animationDuration = fallDuration + 's';
+    
+    document.body.appendChild(leaf);
+    
+    setTimeout(() => {
+        leaf.remove();
+    }, fallDuration * 1000);
+}
+
+setInterval(createLeaf, 400);
